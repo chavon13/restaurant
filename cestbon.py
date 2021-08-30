@@ -7,9 +7,12 @@ print(menu)
 class Order:
     def __init__(self, items = [], customer = {}, fulfilled = False):
         self.items = input("What can I get you?")
-        self.customer = input("Can I have yur name please?")
+        self.customer = input("Can I have your name please?")
         self.fulfilled = fulfilled
+    def enter_order(self):
+        return self.items
 
-    def add_menu_order(self, menu):
-        self.items["order"] = order
+
+order1 = Order()
+order1.enter_order
     
