@@ -14,26 +14,30 @@ class Order:
         fries = 8
         onion_rings = 8
         drink = 5
-        while wallet >= 4:
+        valid = True
+        while valid:
             if self.items == "burgers":
                 burger_total = wallet - burgers
                 print(burger_total)
-                wallet -= 10
+                valid = False
+    
             elif self.items == "fries":
                 fries_total = wallet - fries
                 print(fries_total)
-                wallet -= 8
+                valid = False
+            
             elif self.items == "onion_rings":
                 onion_rings_total = wallet - onion_rings
                 print(onion_rings_total)
-                wallet -= 8
+                valid = False        
             elif self.items ==  "drink":
                 drink_total = wallet - drink
                 print(drink_total)
-                wallet -= 5
-
+                valid = False
+                
             else:
                 print("Please enter your order.")
+                valid = False
 
     # def enter_order(self):
     #     return self.items
