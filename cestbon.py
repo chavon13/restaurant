@@ -1,4 +1,4 @@
-wallet = 100
+
 
 menu = [["burgers", 10], ["fries", 8], ["onion rings", 8], ["drink", 5]]
 
@@ -9,16 +9,32 @@ class Order:
         self.customer = input("Can I have your name please?")
         self.items = input("What can I get you?")
         self.fulfilled = fulfilled
-        if self.items == "burgers":
-            print(wallet - 10)
-        elif self.items == "fries":
-            print(wallet - 8)
-        elif self.items == "onion rings":
-            print(wallet - 8)
-        elif self.items ==  "drink":
-            print(wallet - 5)
-        else:
-            print("Please enter your order.")
+        wallet = 100
+        burgers = 10
+        fries = 8
+        onion_rings = 8
+        drink = 5
+        while wallet >= 4:
+            if self.items == "burgers":
+                burger_total = wallet - burgers
+                print(burger_total)
+                wallet -= 10
+            elif self.items == "fries":
+                fries_total = wallet - fries
+                print(fries_total)
+                wallet -= 8
+            elif self.items == "onion_rings":
+                onion_rings_total = wallet - onion_rings
+                print(onion_rings_total)
+                wallet -= 8
+            elif self.items ==  "drink":
+                drink_total = wallet - drink
+                print(drink_total)
+                wallet -= 5
+
+            else:
+                print("Please enter your order.")
+
     # def enter_order(self):
     #     return self.items
 
