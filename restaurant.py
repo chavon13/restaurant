@@ -10,4 +10,5 @@ class Restaurant:
         new_cx["number"] = input("May I please have a phone number for your order?")
         self.new_customer(new_cx["name"], new_cx["number"])
 
-print(customers)
+    
+

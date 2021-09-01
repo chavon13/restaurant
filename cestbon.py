@@ -42,7 +42,11 @@ class Order:
     # def enter_order(self):
     #     return self.items
 
-        
+    def add_customer(self, name):
+        self.customer["name"] = name   
+
+    def add_order(self, items):
+        self.items.append(item) 
 
 
 
